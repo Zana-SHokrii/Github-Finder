@@ -46,8 +46,8 @@ export default class App extends Component {
             this.setState({text: e.target.value})
 
             this.setState({loading: true})
-            //const result = await axios.get(`https://api.github.com/search/users?q=${e.target.value}`)
-            const result = await axios.get(`https://api.github.com/search/users?q=${e.target.value}&client_id=${import.meta.env.VITE_CLIENT_ID}&client_secret=${import.meta.env.VITE_CLIENT_SECRET}`)
+            const result = await axios.get(`https://api.github.com/search/users?q=${e.target.value}`)
+            //const result = await axios.get(`https://api.github.com/search/users?q=${e.target.value}&client_id=${import.meta.env.VITE_CLIENT_ID}&client_secret=${import.meta.env.VITE_CLIENT_SECRET}`)
             this.setState({users: result.data.items, loading: false})
         }
 
