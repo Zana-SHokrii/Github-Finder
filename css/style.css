@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #e0e0e0;
+}
+
+.box {
+  width: 90%;
+  height: auto;
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1254901961);
+}
+.box .search-icon {
+  float: left;
+  margin-top: 6px;
+  padding-right: 10px;
+}
+.box input {
+  width: 60%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0 10px;
+  font-family: "Poppins", sans-serif;
+}
+.box input ::-moz-placeholder {
+  color: #838383;
+}
+.box input ::placeholder,
+.box input ::-moz-placeholder,
+.box input ::-webkit-input-placeholder {
+  color: #838383;
+}
+.box .clear {
+  float: right;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 10px;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.box .quick-access {
+  float: right;
+  margin-top: 10px;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.box .quick-access strong {
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 0 4px;
+  font-weight: 800;
+}
+@media screen and (max-width: 576px) {
+  .box {
+    padding: 15px;
+  }
+  .box input {
+    width: 60%;
+  }
+  .box .quick-access {
+    display: none;
+  }
+}
+@media screen and (min-width: 576px) {
+  .box {
+    width: 540px;
+  }
+  .box input {
+    width: 62%;
+  }
+}
+.box .tabs a {
+  padding: 9px;
+  margin: 0 5px 0 0;
+  color: #838383;
+  transition: 0.15s;
+  cursor: pointer;
+  font-weight: 500;
+}
+.box .tabs a:hover {
+  background-color: rgba(224, 224, 224, 0.4431372549);
+  border-radius: 4px;
+}
+.box .tabs #selected {
+  border-bottom: 3px solid #000;
+  color: #000;
+}
+.box .tabs span {
+  color: #838383;
+  background-color: #e0e0e0;
+  padding: 0 4px;
+  border-radius: 4px;
+  margin-left: 3px;
+}
+.box .tabs .setting {
+  float: right;
+}
+.box .tabs .setting .setting-icon img {
+  cursor: pointer;
+  transition: 1s;
+}
+.box .tabs .setting .setting-icon img:hover {
+  animation: rotating 2s linear infinite;
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.box .tabs .setting .menu {
+  display: none;
+  position: absolute;
+  width: 180px;
+  height: auto;
+  background-color: white;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1254901961);
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 12px;
+}
+.box .tabs .setting .menu input {
+  width: 10px;
+}
+.box .tabs .setting .menu a {
+  color: #000;
+}
+.box .tabs .setting .menu a:hover {
+  border: none;
+  color: #838383;
+}
+.box .tabs .setting .menu .switch {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 15px;
+  margin-top: 4px;
+}
+.box .tabs .setting .menu .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.box .tabs .setting .menu .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.box .tabs .setting .menu .slider:before {
+  position: absolute;
+  content: "";
+  height: 11px;
+  width: 11px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+}
+.box .tabs .setting .menu input:checked + .slider {
+  background-color: #24282c;
+}
+.box .tabs .setting .menu input:focus + .slider {
+  box-shadow: 0 0 1px #24282c;
+}
+.box .tabs .setting .menu input:checked + .slider:before {
+  transform: translateX(15px);
+}
+.box .tabs .setting .menu .slider.round {
+  border-radius: 34px;
+}
+.box .tabs .setting .menu .slider.round:before {
+  border-radius: 50%;
+}
+.box .tabs hr {
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.231372549);
+  border: none;
+}
+.box .result {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.box .result .user {
+  width: 100%;
+  margin: 15px 0 0 0;
+}
+.box .result .user a {
+  text-decoration: none;
+}
+.box .result .user .image {
+  float: left;
+  position: relative;
+}
+.box .result .user .image img {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+}
+.box .result .user .image span {
+  position: absolute;
+  left: 34px;
+  bottom: 3px;
+  width: 16px;
+  height: 16px;
+  background-color: #2edb2e;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+.box .result .user .data a {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0 0 0 7px;
+  text-decoration: none;
+}
+.box .result .user .data p {
+  color: #838383;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0 0 0 60px;
+  text-decoration: none;
+}
+.box .about h1 {
+  padding: 0;
+  margin: 15px 0 0 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+.box .about p {
+  padding: 0;
+  margin: 15px 0 0 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.box .about strong {
+  color: red;
+}
+.box .about a {
+  color: red;
+}
+.box .spinner {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */
