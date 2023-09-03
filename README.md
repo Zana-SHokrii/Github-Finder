@@ -4,17 +4,7 @@ A react app to search Github profiles, built with **React** and **Sass**
 
 This website is ready to deploy by itself and requires no dependencies.
 
-<!-- ![URL Shortener](https://s8.uupload.ir/files/code-snapshot_jstk.png) -->
+![Github Finder](https://s6.uupload.ir/files/untitled_pwlq.png)
 
-<!-- ## Preview
-[URL Shortener Preview](https://hobbyless-material.000webhostapp.com/) -->
-
-<!-- 
-ریسپانسیو شده برای
-Extra small   <576px	
-Small         ≥576px	
-Medium        ≥768px	
-Large         ≥992px	
-Extra large   ≥1200px
-
- -->
+## Preview
+[Github Finder Preview](https://zana-shokrii.github.io/Github-Finder/)
